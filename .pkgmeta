@@ -1,0 +1,14 @@
+package-as: AdiBags_UpgradeLevel
+enable-nolib-creation: no
+
+move-folders:
+    AdiBags_UpgradeLevel/AdiBags_UpgradeLevel: AdiBags_UpgradeLevel
+
+manual-changelog:
+    filename: CHANGELOG.md
+    markup-type: markdown
+
+ignore:
+    - CHANGELOG.md
+    - README.md
+    - .editorconfig
