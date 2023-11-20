@@ -1,0 +1,10 @@
+## Interface: 100200
+
+## Title: AdiBags - Upgrade Level
+## Notes: Creates AdiBags groups based on Upgrade Levels: Explorer, Adventurer, Champion, and Hero.
+## Author: KirronVerified
+## Version: 1.0.2
+
+## Dependencies: AdiBags
+
+AdiBags_UpgradeLevel.lua
