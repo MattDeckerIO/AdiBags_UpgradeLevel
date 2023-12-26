@@ -68,9 +68,7 @@ function setFilter:Filter(slotData)
 	local _, _, _, _, _, itemType, _, _, _, _, _, _, _, bindType, _, _, _ = GetItemInfo(itemId)
 	
   if itemType == "Armor" or itemType == "Weapon" then
-  print(itemType)
   local level = self:GetItemCategory(bag, slot)
-  --print(level)
   return level
   else return nil
   end
