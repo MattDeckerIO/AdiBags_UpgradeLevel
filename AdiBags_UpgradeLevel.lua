@@ -65,10 +65,15 @@ function setFilter:Filter(slotData)
 
 	local bag, slot, quality, itemId = slotData.bag, slotData.slot, slotData.quality, slotData.itemId
 
-	local _, _, _, _, _, _, _, _, _, _, _, _, _, bindType, _, _, _ = GetItemInfo(itemId)
-
+	local _, _, _, _, _, itemType, _, _, _, _, _, _, _, bindType, _, _, _ = GetItemInfo(itemId)
+	
+  if itemType == "Armor" or itemType == "Weapon" then
+  print(itemType)
   local level = self:GetItemCategory(bag, slot)
+  --print(level)
   return level
+  else return nil
+  end
 end
 
 
@@ -89,10 +94,7 @@ function setFilter:GetItemCategory(bag, slot)
       break
     end
 
-    local dfs2 = line.leftText:match("Dragonflight Season 2")
-    if dfs2 ~= nil then
-      return "Dragonflight Season 2"
-    end
+
 
     local explorer = line.leftText:match("^Upgrade Level: Explorer")
     if explorer ~= nil then
