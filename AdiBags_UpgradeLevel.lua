@@ -123,6 +123,11 @@ function setFilter:GetItemCategory(bag, slot)
     if hero ~= nil then
       return "Hero"
     end
+
+    local myth = line.leftText:match("^Upgrade Level: Myth")
+    if myth ~= nil then
+      return "Myth"
+    end
   end
 
 	return category
