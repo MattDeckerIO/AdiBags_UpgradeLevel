@@ -89,6 +89,11 @@ function setFilter:GetItemCategory(bag, slot)
       break
     end
 
+    local dfs3 = line.leftText:match("Dragonflight Season 3")
+    if dfs3 ~= nil then
+      return "Dragonflight Season 3"
+    end
+
     local dfs2 = line.leftText:match("Dragonflight Season 2")
     if dfs2 ~= nil then
       return "Dragonflight Season 2"
